@@ -17,7 +17,7 @@ public class AdminController {
 
     @RequestMapping("/admin")
     public String toLogin(@ModelAttribute Auser auser){
-        return "admin/login";
+        return "/admin/login";
     }
     @RequestMapping("/admin/login")
     public String login(@ModelAttribute Auser auser, Model model, HttpSession session){

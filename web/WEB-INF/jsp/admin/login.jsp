@@ -34,7 +34,7 @@
             font-family:Arial,Helvetica,sans-serif;
             font-size:12px;
             margin:10px 10px auto;
-            background-image: url(../../../images/admin/bb.jpg);
+            background-image: url(images/admin/bb.jpg);
         }
     </style>
     <script type="text/javascript">
@@ -57,7 +57,7 @@
         <form:form action="admin/login" method="post" modelAttribute="auser" >
             <table>
                 <tr>
-                    <td colspan="2"><img src="../../../images/admin/login.gif"></td>
+                    <td colspan="2"><img src="images/admin/login.gif"></td>
 
                 </tr>
                 <tr>
@@ -73,8 +73,8 @@
 
                 <tr>
                     <td colspan="2">
-                        <input type="image" src="../../../images/admin/ok.gif" onclick="gogo()">
-                        <input type="image" src="../../../images/admin/cancel.gif" onclick="cancel()">
+                        <input type="image" src="images/admin/ok.gif" onclick="gogo()">
+                        <input type="image" src="images/admin/cancel.gif" onclick="cancel()">
                     </td>
                 </tr>
             </table>

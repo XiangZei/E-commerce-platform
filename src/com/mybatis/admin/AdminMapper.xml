@@ -2,7 +2,8 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper>
+<mapper namespace="com.dao.AdminDao">
+    <!--查询用户信息-->
     <select id="login" resultType="Auser" parameterType="Auser">
       SELECT * FROM ausertable WHERE aname=#{aname} AND apwd=#{apwd}
     </select>

@@ -7,16 +7,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<base href="<%=basePath%>">
-<title>首页</title>
-<link href="../../../css/before/daohang.css" rel="stylesheet" type="text/css" />
-<link href="../../../css/before/common.css" rel="stylesheet" type="text/css" />
-<link href="../../../css/before/style.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript">
-	function clearValue(){
-		document.myForm.mykey.value = "";
-	}
-</script>
+	<base href="<%=basePath%>">
+	<title>首页</title>
+	<link href="../../../css/before/daohang.css" rel="stylesheet" type="text/css" />
+	<link href="../../../css/before/common.css" rel="stylesheet" type="text/css" />
+	<link href="../../../css/before/style.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript">
+		function clearValue(){
+			document.myForm.mykey.value = "";
+		}
+	</script>
 </head>
 <body>
 	<div class="all_zong">
@@ -51,7 +51,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<!--logo 搜索-->
 		<div class="all_zong_logo">
 			<div class="all_zong_logo2">
-				<img src="images/before/mylogo.png" />
+				<img src="../../../images/before/mylogo.png" />
 			</div>
 			<div class="back_search">
 				<div class="back_search_red">

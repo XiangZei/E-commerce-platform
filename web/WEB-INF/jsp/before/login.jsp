@@ -49,7 +49,7 @@
         <form:form action="user/login" method="post" modelAttribute="buser" name="loginform">
             <table>
                 <tr>
-                    <td colspan="2"><img src="../../../images/admin/login.gif"></td>
+                    <td colspan="2"><img src="images/admin/login.gif"></td>
 
                 </tr>
                 <tr>

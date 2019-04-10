@@ -19,13 +19,13 @@ public class MyExceptionHandler implements HandlerExceptionResolver {
         if(arg3 instanceof AdminLoginNoException){
             arg0.setAttribute("auser",new Auser());
             arg0.setAttribute("msg","Ã»ÓÐµÇÂ½£¬ÇëµÇÂ¼£¡");
-            return new ModelAndView("/admin/login",model);
+            return new ModelAndView("admin/login",model);
         }else if(arg3 instanceof UserLoginNoException){
             arg0.setAttribute("buser" ,new Buser());
             arg0.setAttribute("msg","Ã»ÓÐµÇÂ½,ÇëµÇÂ¼!");
-            return new ModelAndView("/before/login",model);
+            return new ModelAndView("before/login",model);
         }else{
-            return new ModelAndView("/error/error",model);
+            return new ModelAndView("error/error",model);
         }
     }
 
