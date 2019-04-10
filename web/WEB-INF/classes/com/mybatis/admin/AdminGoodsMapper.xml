@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.AdminGoodsDao">
+        <!--查询商品-->
+    <select id="selectGoods" resultType="Goods">
+        SELECT * FROM shop.goodstable
+    </select>
+    <!--分页查询商品-->
+    <select id="selectAllGoodsByPage" resultType="Goods" parameterType="map">
+        SELECT * FROM shop.goodstable ORDER BY id LIMIT #{startIndex} ,#{perPageSize}
+    </select>
+    <!--添加商品-->
+    <insert id="addGoods" parameterType="Goods">
+        INSERT INTO shop.goodstable (id,gname,goprice,grprice,gstore,gpicture,goodstype_id)
+        VALUES (null,#{gname},#{goprice},#{grprice},#{gstore},#{gpicture},#{goodstype_id})
+    </insert>
+    <!--根据ID查询一个商品-->
+    <select id="selectGoodsById" resultType="Goods" parameterType="Integer">
+        SELECT gt.*,gy.typename from shop.goodstable gt,shop.goodstype gy where gt.id=#{id} and gt.goodstype_id=gy.id
+    </select>
+    <!--删除多个商品-->
+    <delete id="deleteGoods" parameterType="List">
+        DELETE FROM SHOP.goodstable WHERE id IN
+        <foreach item="item" index="index" collection="list" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </delete>
+    <!--删除单个商品-->
+    <delete id="deleteAGoods" parameterType="Integer">
+        delete from shop.goodstable where id=#{id}
+    </delete>
+    <!--修改一个商品-->
+    <update id="updateGoodsById" parameterType="Goods">
+        update shop.goodstable
+        <set>
+            <if test="gname != nul">
+                gname=#{gname}
+            </if>
+            <if test="goprice != null">
+                goprice=#{goprice}
+            </if>
+            <if test="grprice">
+                grprice=#{grprice}
+            </if>
+            <if test="gstore != null">
+                gstore=#{gstore}
+            </if>
+            <if test="gpicture != null">
+                gpicture=#{gpicture}
+            </if>
+            <if test="goodstype_id != null">
+                goodstype_id=#{goodstype_id}
+            </if>
+        </set>
+            WHERE id=#{id}
+    </update>
+    <!--查询关联商品-->
+    <select id="selectCartGoods" parameterType="Integer" resultType="map">
+        select * from shop.carttable where goodstable_id=#{id}
+    </select>
+    <select id="selectFocusGoods" parameterType="Integer" resultType="map">
+        select * from shop.focustable where goodstable_id=#{id}
+    </select>
+    <select id="selectOrderdetailGoods" parameterType="Integer" resultType="map">
+        select * from shop.orderdetail where goodstable_id=#{id}
+    </select>
+</mapper>
