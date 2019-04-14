@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.CartDao">
+
+    <!--查询购物车-->
+    <select id="selectCart" parameterType="Integer" resultType="map">
+              select gt.id ,gt.gpicture,gt.grprice,ct.shoppingnum,ct.shoppingnum*gt.grprice smallsum
+              from shop.goodstable gt ,shop.carttable ct where gt.id=ct.goodstable_id and ct.busertable_id=#{id}
+    </select>
+
+</mapper>

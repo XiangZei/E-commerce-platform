@@ -32,7 +32,7 @@
             obj.className="bgcolor";
         }
         function changeColor1(obj){
-            obj.className="bgcolor";
+            obj.className="";
         }
     </script>
 </head>

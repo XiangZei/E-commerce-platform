@@ -31,30 +31,30 @@
     <delete id="deleteAGoods" parameterType="Integer">
         delete from shop.goodstable where id=#{id}
     </delete>
-    <!--修改一个商品-->
+    <!-- 修改一个商品 -->
     <update id="updateGoodsById" parameterType="Goods">
-        update shop.goodstable
+        update goodstable
         <set>
-            <if test="gname != nul">
-                gname=#{gname}
+            <if test="gname != null">
+                gname = #{gname},
             </if>
             <if test="goprice != null">
-                goprice=#{goprice}
+                goprice = #{goprice},
             </if>
-            <if test="grprice">
-                grprice=#{grprice}
+            <if test="grprice != null">
+                grprice = #{grprice},
             </if>
             <if test="gstore != null">
-                gstore=#{gstore}
+                gstore = #{gstore},
             </if>
             <if test="gpicture != null">
-                gpicture=#{gpicture}
+                gpicture = #{gpicture},
             </if>
             <if test="goodstype_id != null">
-                goodstype_id=#{goodstype_id}
+                goodstype_id = #{goodstype_id},
             </if>
         </set>
-            WHERE id=#{id}
+        where id = #{id}
     </update>
     <!--查询关联商品-->
     <select id="selectCartGoods" parameterType="Integer" resultType="map">

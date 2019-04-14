@@ -1,17 +1,10 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: 祥子
-  Date: 2019/4/9
-  Time: 21:22
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%
-    String path=request.getContextPath();
-    String basePath=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+    String path = request.getContextPath();
+    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
     <base href="<%=basePath%>">
@@ -30,7 +23,7 @@
     <script type="text/javascript">
         function checkDel(id){
             if(window.confirm("是否要删除该商品类型？")){
-                window.location.href="/电子商务平台/adminGoods/deleteType?id="+id;
+                window.location.href="/电子商务平台/adminType/deleteType?id="+id;
             }
         }
     </script>

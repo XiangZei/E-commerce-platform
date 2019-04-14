@@ -23,15 +23,13 @@
 
 
 
-<!--避免中文乱码-->
-
+    <!-- 避免中文乱码 -->
     <filter>
         <filter-name>characterEncodingFilter</filter-name>
         <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
         <init-param>
             <param-name>encoding</param-name>
             <param-value>UTF-8</param-value>
-
         </init-param>
         <init-param>
             <param-name>forceEncoding</param-name>
@@ -40,6 +38,6 @@
     </filter>
     <filter-mapping>
         <filter-name>characterEncodingFilter</filter-name>
-        <url-pattern>/</url-pattern>
+        <url-pattern>/*</url-pattern>
     </filter-mapping>
 </web-app>

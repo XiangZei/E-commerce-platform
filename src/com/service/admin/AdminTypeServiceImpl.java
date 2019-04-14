@@ -23,6 +23,7 @@ public class AdminTypeServiceImpl implements AdminTypeService {
 
     @Override
     public String addType(String typename, Model model, HttpSession session){
+
         adminTypeDao.addType(typename);
         session.setAttribute("goodsType",adminTypeDao.selectGoodsType());
         return "forward:/adminType/toAddType";

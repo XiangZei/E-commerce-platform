@@ -29,6 +29,7 @@ public class AdminTypeController extends BaseController{
      */
     @RequestMapping("/addType")
     public String addType(String typename, Model model, HttpSession session){
+
         return adminTypeService.addType(typename,model,session);
     }
     /**
