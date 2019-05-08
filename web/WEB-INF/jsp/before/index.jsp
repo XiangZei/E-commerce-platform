@@ -10,9 +10,9 @@
 <html>
 <head>
     <title>首页</title>
-    <link href="../../../css/before/daohang.css" rel="stylesheet" type="text/css"/>
-    <link href="../../../css/before/common.css" rel="stylesheet" type="text/css"/>
-    <link href="../../../css/before/style.css" rel="stylesheet" type="text/css"/>
+    <link href="${pageContext.request.contextPath}/css/before/daohang.css" rel="stylesheet" type="text/css"/>
+    <link href="${pageContext.request.contextPath}/css/before/common.css" rel="stylesheet" type="text/css"/>
+    <link href="${pageContext.request.contextPath}/css/before/style.css" rel="stylesheet" type="text/css"/>
 </head>
 <script type="text/javascript">
     function openNotice(url){

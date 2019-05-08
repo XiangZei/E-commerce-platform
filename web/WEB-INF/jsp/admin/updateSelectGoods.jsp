@@ -59,8 +59,6 @@
                     <td>${goods.gstore}</td>
                     <td><a href="adminGoods/selectAGoods?id=${goods.id}" target="_blank">详情</a></td>
                     <td><a href="adminGoods/selectAGoods?id=${goods.id}&act=updateAgoods" target="center">修改</a></td>
-
-
                 </tr>
 
             </c:forEach>

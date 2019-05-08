@@ -22,6 +22,6 @@
         <!--<mapper resource="com/mybatis/before/UserMapper.xml"/>-->
         <mapper resource="com/mybatis/before/CartMapper.xml"/>
         <!--<mapper resource="com/mybatis/before/OrderMapper.xml"/>-->
-        <!--<mapper resource="com/mybatis/before/UserCenterMapper.xml"/>-->
+        <mapper resource="com/mybatis/before/UserCenterMapper.xml"/>
     </mappers>
 </configuration>

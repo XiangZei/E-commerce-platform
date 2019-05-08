@@ -2,6 +2,7 @@ package com.controller.admin;
 
 import com.po.Auser;
 import com.service.admin.AdminService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -22,6 +23,12 @@ public class AdminController {
     @RequestMapping("/admin/login")
     public String login(@ModelAttribute Auser auser, Model model, HttpSession session){
         return adminService.login(auser,model,session);
+    }
+
+    @RequestMapping("/exit")
+    public String exit(@ModelAttribute Auser auser ,HttpSession session){
+        session.invalidate();
+        return "/admin/login";
     }
 
 

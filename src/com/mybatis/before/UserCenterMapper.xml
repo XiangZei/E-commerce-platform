@@ -5,7 +5,7 @@
 <mapper namespace="com.dao.UserCenterDao">
 
 
-    <select id="myOrder" resultType="map" parameterMap="Integer">
+    <select id="myOrder" resultType="map" parameterType="Integer">
         select id ,amount,busertable_id,status,orderdate from shop.orderbasetable where  busertable_id=#{bid}
     </select>
 

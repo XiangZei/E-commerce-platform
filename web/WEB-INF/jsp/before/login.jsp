@@ -17,9 +17,9 @@
 <head>
     <base href="<%=basePath%>">
     <title>登陆界面</title>
-    <link href="../../../css/before/daohang.css" rel="stylesheet" type="text/css"/>
-    <link href="../../../css/before/common.css" rel="stylesheet" type="text/css"/>
-    <link href="../../../css/before/style.css" rel="stylesheet" type="text/css"/>
+    <link href="${pageContext.request.contextPath}/css/before/daohang.css" rel="stylesheet" type="text/css"/>
+    <link href="${pageContext.request.contextPath}/css/before/common.css" rel="stylesheet" type="text/css"/>
+    <link href="${pageContext.request.contextPath}/css/before/style.css" rel="stylesheet" type="text/css"/>
     <style type="text/css">
         table{
             text-align:center;

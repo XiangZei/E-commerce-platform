@@ -9,9 +9,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <head>
 	<base href="<%=basePath%>">
 	<title>首页</title>
-	<link href="../../../css/before/daohang.css" rel="stylesheet" type="text/css" />
-	<link href="../../../css/before/common.css" rel="stylesheet" type="text/css" />
-	<link href="../../../css/before/style.css" rel="stylesheet" type="text/css" />
+	<link href="${pageContext.request.contextPath}/css/before/daohang.css" rel="stylesheet" type="text/css" />
+	<link href="${pageContext.request.contextPath}/css/before/common.css" rel="stylesheet" type="text/css" />
+	<link href="${pageContext.request.contextPath}/css/before/style.css" rel="stylesheet" type="text/css" />
 	<script type="text/javascript">
 		function clearValue(){
 			document.myForm.mykey.value = "";
