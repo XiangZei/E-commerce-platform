@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.AdminNoticeDao">
+    <insert id="addNotice" parameterType="Notice" >
+        insert into shop.noticetable (id, ntitle, ncontent, ntime) VALUES
+            (null,#{ntitle},#{ncontent},now())
+    </insert>
+
+    <select id="deleteNoticeSelect" resultType="Notice" >
+        select * from shop.noticetable
+    </select>
+
+    <delete id="deleteNotice" parameterType="Integer">
+        delete from shop.noticetable where id=#{id}
+    </delete>
+
+    <select id="selectANotice" parameterType="Integer" resultType="Notice">
+        select * from shop.noticetable where id=#{id}
+    </select>
+
+</mapper>
