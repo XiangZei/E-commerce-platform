@@ -149,7 +149,7 @@
     </div>
 
     <div id="footer">
-        Copyright ©清华大学出版社
+
     </div>
 </body>
 </html>
