@@ -51,7 +51,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<!--logo 搜索-->
 		<div class="all_zong_logo">
 			<div class="all_zong_logo2">
-				<img src="../../../images/before/mylogo.png" />
+				<img src="images/before/mylogo.png" />
 			</div>
 			<div class="back_search">
 				<div class="back_search_red">

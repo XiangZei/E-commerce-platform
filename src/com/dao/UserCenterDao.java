@@ -11,5 +11,5 @@ import java.util.Map;
 public interface UserCenterDao {
     List<Map<String,Object>> myOrder(Integer bid);
     List<Map<String,Object>> myFocus(Integer bid);
-//    List<Map<String,Object>> orderDetail(Integer ordersn);
+    List<Map<String,Object>> orderDetail(Integer ordersn);
 }

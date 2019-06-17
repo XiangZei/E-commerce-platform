@@ -4,7 +4,7 @@
     String path = request.getContextPath();
     String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-<jsp:include page="head.jsp"></jsp:include>
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
@@ -15,12 +15,27 @@
     <link href="${pageContext.request.contextPath}/css/before/style.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
         table{
+            margin-top: 200px;
             text-align: center;
         }
         .textSize{
             width: 200px;
             height: 20px;
         }
+        body{
+            background-color: cornflowerblue;
+        }
+        .form-control{
+            display:inline-block;
+            width:auto;
+            vertical-align: auto;
+            margin:1px;
+        }
+        table>tr{
+            margin-top:10px;
+        }
+
+
     </style>
     <script type="text/javascript">
         //确定按钮
@@ -45,15 +60,15 @@
             </tr>
             <tr>
                 <td>E-Mail：</td>
-                <td><input type="text" name="bemail" value="${buser.bemail }"  class="textSize"/></td>
+                <td><input class="form-control" placeholder="Email address" type="text" name="bemail" value="${buser.bemail }"  class="textSize"/></td>
             </tr>
             <tr>
                 <td>密码：</td>
-                <td><input type="password" name="bpwd" class="textSize"/></td>
+                <td><input class="form-control" placeholder="password" type="password" name="bpwd" class="textSize"/></td>
             </tr>
             <tr>
                 <td>验证码：</td>
-                <td><input type="text" name="code" class="textSize"/></td>
+                <td><input class="form-control" type="text" name="code" class="textSize"/></td>
             </tr>
             <tr>
                 <td>

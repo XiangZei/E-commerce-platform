@@ -1,12 +1,11 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: 祥子
-  Date: 2019/3/15
-  Time: 16:14
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%
+    String path = request.getContextPath();
+    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+<jsp:include page="head.jsp"></jsp:include>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
     <title>首页</title>
@@ -32,14 +31,14 @@
                     <div class="top10List clearfix">
                         <c:forEach items="${salelist}" var="sg" varStatus="status">
                             <ul class="clearfix">
-                                <img class="iteration" src="../../../images/before/top_${status.index+1 }.gif"/>
+                                <img class="iteration" src="images/before/top_${status.index+1 }.gif"/>
                                 <li class="topimg">
-                                    <a href="goodDetail?id=${sg.id}">
+                                    <a href="goodsDetail?id=${sg.id}">
                                         <img class="samllimg" alt="" src="logos/${sg.gpicture}"/>
                                     </a>
                                 </li>
                                 <li class="iteration1">
-                                    <a href="goodDetail?id=${sg.id}">${sg.name}</a><br/>
+                                    <a href="goodsDetail?id=${sg.id}">${sg.name}</a><br/>
                                     售价：<font class="f1">￥${sg.grprice}</font><br/>
                                 </li>
                             </ul>
@@ -57,8 +56,8 @@
                     </div>
                     <div class="top10List clearfix">
                         <c:forEach items="${focuslist}" var="sg" varStatus="status">
-                            <ul>
-                                <img class="iteration" src="../../../images/before/top_${status.index+1}.gif"/>
+                            <ul class="clearfix">
+                                <img class="iteration" src="images/before/top_${status.index+1}.gif"/>
                                 <li class="topimg"><a href="goodsDetail?id=${sg.id}">
                                     <img class="samllimg" alt="" src="logos/${sg.gpicture}"/>
                                 </a></li>
@@ -80,7 +79,7 @@
             <div class="AreaR">
                 <div class="AreaM clearfix">
                     <div id="focus">
-                        <img src="../../../images/before/540.jpg"/>
+                        <img src="images/before/540.jpg"/>
                     </div>
                 </div>
                 <div class="AreaRR clearfix">
@@ -93,7 +92,7 @@
                             <div class="post_list ared">
                                 <ul>
                                     <c:forEach items="${noticelist}" var="nt">
-                                        <li><a href="javascript:openNotice('/ch20/selectANotice?id=${nt.id}');">
+                                        <li><a href="javascript:openNotice('/电子商务平台/selectANotice?id=${nt.id}');">
                                             ${nt.ntitle}
                                         </a></li>
                                     </c:forEach>

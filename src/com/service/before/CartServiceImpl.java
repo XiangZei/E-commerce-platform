@@ -59,7 +59,7 @@ public class CartServiceImpl implements CartService{
 		}
 		model.addAttribute("total", sum);
 		model.addAttribute("cartlist", list);
-		return "before/cart";
+		return "/before/cart";
 	}
 	@Override
 	public String deleteAgoods(Integer id, HttpSession session) {
@@ -83,7 +83,7 @@ public class CartServiceImpl implements CartService{
 		}
 		model.addAttribute("total", sum);
 		model.addAttribute("cartlist", list);
-		return "before/orderconfirm";
+		return "/before/orderconfirm";
 	}
 
 }

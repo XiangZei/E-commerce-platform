@@ -34,7 +34,7 @@ visibility:hidden;
  height:1%;
 }
 
-.ared a:link,.ared a:visited{color:#333; text-decoration:none;}
+.ared a:link,.ared a:visited{color:green; text-decoration:none;}
 .ared a:hover,.ared a:active{color:#ff6600; text-decoration:none;}
 
 .a333 a:link,.a333 a:visited{color:#333; text-decoration:none;}

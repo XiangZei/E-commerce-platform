@@ -30,7 +30,7 @@
     </script>
 </head>
 <body>
-    <form action="/电子商务平台/putCart" name="putcartform" method="post">
+    <form action="/电子商务平台/cart/putCart" name="putcartform" method="post">
         <div class="blank"></div>
         <div class="block clearfix">
             <div class="location ared">

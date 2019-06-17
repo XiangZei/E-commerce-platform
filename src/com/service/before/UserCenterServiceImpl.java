@@ -19,12 +19,12 @@ public class UserCenterServiceImpl implements UserCenterService{
 	public String userCenter(HttpSession session, Model model) {
 		model.addAttribute("myOrder", userCenterDao.myOrder(MyUtil.getUserId(session)));
 		model.addAttribute("myFocus", userCenterDao.myFocus(MyUtil.getUserId(session)));
-		return "before/userCenter";
+		return "/before/userCenter";
 	}
 	@Override
 	public String orderDetail(Model model, Integer ordersn) {
 		model.addAttribute("myOrderDetail", userCenterDao.orderDetail(ordersn));
-		return "before/userOrderDetail";
+		return "/before/userOrderDetail";
 	}
 
 }

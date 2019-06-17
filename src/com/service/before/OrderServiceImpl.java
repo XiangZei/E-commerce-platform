@@ -46,12 +46,12 @@ public class OrderServiceImpl implements OrderService{
 		//Çå¿Õ¹ºÎï³µ
 		orderDao.clear(MyUtil.getUserId(session));
 		model.addAttribute("ordersn", order.getId());
-		return "before/orderdone";
+		return "/before/orderdone";
 	}
 	@Override
 	public String pay(Integer ordersn) {
 		orderDao.pay(ordersn);
-		return "before/paydone";
+		return "/before/paydone";
 	}
 
 }

@@ -34,26 +34,26 @@ public class IndexServiceImpl implements IndexService{
 		if(goods.getId() == null) 
 			goods.setId(0);
 		model.addAttribute("lastedlist", indexDao.getLastedGoods(goods));
-		return "before/index";
+		return "/before/index";
 	}
 
 	@Override
 	public String toRegister(Model model) {
 		model.addAttribute("rbuser", new Buser());
-		return "before/register";
+		return "/before/register";
 	}
 
 	@Override
 	public String toLogin(Model model) {
 		model.addAttribute("lbuser", new Buser());
-		return "before/login";
+		return "/before/login";
 	}
 
 	@Override
 	public String goodsDetail(Model model, Integer id) {
 		Goods goods = indexDao.selectGoodsById(id);
 		model.addAttribute("goods", goods);
-		return "before/goodsdetail";
+		return "/before/goodsdetail";
 	}
 
 	@Override
@@ -67,7 +67,7 @@ public class IndexServiceImpl implements IndexService{
 	public String search(Model model, String mykey) {
 		List<Goods> list = indexDao.search(mykey);
 		model.addAttribute("searchlist", list);
-		return "before/searchResult";
+		return "/before/searchResult";
 	}
 	
 }
