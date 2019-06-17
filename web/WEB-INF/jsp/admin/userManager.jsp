@@ -43,23 +43,20 @@
 </head>
 <body>
 <br>
-<table border="1" style="border-color: PaleGreen">
+<table border="1" bordercolor="PaleGreen">
     <tr>
         <th width="200px">用户ID</th>
         <th width="200px">用户E-mail</th>
         <th width="200px">用户密码</th>
         <th width="250px">删除</th>
     </tr>
-    <c:forEach var="h" items="${userList}">
+    <c:forEach var="n" items="${userList}">
         <tr onmousemove="changeColor(this)" onmouseout="changeColor1(this)">
             <td>${n.id}</td>
             <td>${n.bemail}</td>
             <td><input type="password" value="${n.bpwd}" readonly></td>
             <td>
-                <c:if test="${n.status==0}">
-                    <a href="javascript:checkDel('${n.id}')">删除</a>
-                </c:if>
-                &nbsp;
+                <a href="javaScript:checkDel('${n.id}')">删除</a>
             </td>
         </tr>
     </c:forEach>

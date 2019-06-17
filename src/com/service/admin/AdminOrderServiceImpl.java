@@ -19,7 +19,7 @@ public class AdminOrderServiceImpl implements AdminOrderService {
     public String orderInfo(Model model) {
         List<Map<String,Object>> list = adminOrderDao.orderInfo();
         model.addAttribute("orderList",list);
-        return "admin/orderManager";
+        return "/admin/orderManager";
     }
 
 

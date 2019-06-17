@@ -43,7 +43,7 @@
 </head>
 <body>
 <br>
-<table border="1" style="border-color: PaleGreen">
+<table border="1" bordercolor="PaleGreen">
     <tr>
         <th width="150px">订单编号</th>
         <th width="150px">用户E-mail</th>
@@ -51,19 +51,17 @@
         <th width="100px">订单状态</th>
         <th width="150px">订单日期</th>
         <th width="100px">操作</th>
-
     </tr>
-    <c:forEach var="h" items="${orderList}">
+    <c:forEach var="n" items="${orderList}">
         <tr onmousemove="changeColor(this)" onmouseout="changeColor1(this)">
             <td>${n.id}</td>
             <td>${n.bemail}</td>
             <td>${n.amount}</td>
-            <td><c:if test="${n.status==0}">未付款</c:if><c:if test="${n.status==1}">已付款</c:if> </td>
-
+            <td><c:if test="${n.status == 0}" >未付款</c:if><c:if test="${n.status == 1}" >已付款</c:if></td>
             <td>${n.orderdate}</td>
             <td>
-                <c:if test="${n.status==0}">
-                    <a href="javascript:checkDel('${n.id}')">删除</a>
+                <c:if test="${n.status == 0}" >
+                    <a href="javaScript:checkDel('${n.id}')">删除</a>
                 </c:if>
                 &nbsp;
             </td>

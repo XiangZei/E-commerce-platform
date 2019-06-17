@@ -16,7 +16,7 @@ public class AdminOrderController {
     public String orderInfo(Model model){
         return adminOrderService.orderInfo(model);
     }
-
+    @RequestMapping("/deleteorderManager")
     public String deleteOrderManager(Model model,Integer id){
         return adminOrderService.deleteOrderManager(model,id);
     }

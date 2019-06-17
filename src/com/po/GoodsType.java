@@ -1,6 +1,8 @@
 package com.po;
 
-public class GoodsType {
+import java.io.Serializable;
+
+public class GoodsType  implements Serializable {
     private Integer id;
     private String typename;
     public Integer getId(){
